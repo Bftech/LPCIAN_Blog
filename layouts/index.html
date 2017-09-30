@@ -1,0 +1,25 @@
+{{ partial "head.html" . }}
+
+<body>
+    {{ partial "header.html" . }}
+    <main class="container">
+      <div id="articles_list" class="row mt-5">
+        <div class="col-auto mx-auto">
+          {{ range .Data.Pages }} {{ if eq .Type "articles" }}
+          <article class="row row mb-3">
+            <h2 class="col-auto d-inline">
+              <a href="{{ .Permalink }}">
+                {{ .Title }}
+              </a>
+            </h2>
+            <span class="col">
+              <span class="text-muted align-bottom">{{ .Summary }}</span>
+            </span>
+          </article>
+          {{ end }} {{ end }}
+        </div>
+      </div>
+    </main>
+    {{ partial "scripts.html" . }}
+</body>
+<html>
