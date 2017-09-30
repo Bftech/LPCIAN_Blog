@@ -3,15 +3,16 @@
 <body>
     {{ partial "header.html" . }}
     <main class="container">
-        <article>
-            <h2>
-              {{ .Title }}
-            </h2>
-            <p>
-              {{ .Content }}
-            </p>
+      <div class="row">
+        <article class="col-auto mt-5 mx-auto">
+          <h2>
+            {{ .Title }}
+            <small class="text-muted">[{{ .Date.Format "02/01/2006" }}]</small>
+          </h2>
+          <p>{{ .Content }}</p>
         </article>
+      </div>
     </main>
     {{ partial "scripts.html" . }}
 </body>
-<html>
+</html>

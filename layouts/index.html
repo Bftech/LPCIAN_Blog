@@ -6,13 +6,13 @@
       <div id="articles_list" class="row mt-5">
         <div class="col-auto mx-auto">
           {{ range .Data.Pages }} {{ if eq .Type "articles" }}
-          <article class="row row mb-3 align-items-center">
+          <article class="row mb-3 align-items-center">
             <h2 class="col-auto d-inline">
               <a href="{{ .Permalink }}">
-                {{ .Title }}
+                [{{ .Date.Format "02/01/2006" }}] {{ .Title }}
               </a>
             </h2>
-            <span class="col text-muted">{{ .Summary }}...</span>
+            <span class="col text-muted">{{ .Description }}...</span>
           </article>
           {{ end }} {{ end }}
         </div>
@@ -20,4 +20,4 @@
     </main>
     {{ partial "scripts.html" . }}
 </body>
-<html>
+</html>
