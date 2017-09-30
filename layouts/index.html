@@ -6,15 +6,13 @@
       <div id="articles_list" class="row mt-5">
         <div class="col-auto mx-auto">
           {{ range .Data.Pages }} {{ if eq .Type "articles" }}
-          <article class="row row mb-3">
+          <article class="row row mb-3 align-items-center">
             <h2 class="col-auto d-inline">
               <a href="{{ .Permalink }}">
                 {{ .Title }}
               </a>
             </h2>
-            <span class="col">
-              <span class="text-muted align-bottom">{{ .Summary }}</span>
-            </span>
+            <span class="col text-muted">{{ .Summary }}...</span>
           </article>
           {{ end }} {{ end }}
         </div>
