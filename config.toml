@@ -1,3 +1,6 @@
 baseURL = "https://blog-lpcian-cm.netlify.com/"
 languageCode = "fr-fr"
 title = "Blog LP CIAN Corentin Monmasson"
+
+[blackfriday]
+hrefTargetBlank = true
